@@ -1,0 +1,3 @@
+[submodule "volcasample"]
+	path = volcasample
+	url = git://github.com/korginc/volcasample
