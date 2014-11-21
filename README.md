@@ -8,7 +8,7 @@ Usage
 
 Include `build\syro.js` to your project. You can apply the function below on an [audio context](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) get a downloadable wav file to sing for your volca.
 
-```
+```javascript
 function serializeData(audio, file)
 {
   bufferToWav(audio, function(blob) {
