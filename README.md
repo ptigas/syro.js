@@ -10,17 +10,17 @@ Include `build\syro.js` to your project. You can apply the function below on an 
 
 ```
 function serializeData(audio, file)
-    {
-      bufferToWav(audio, function(blob) {
-        Syrialize(blob, function(a) {
-          Recorder.forceDownload(a, 'syro.wav');
-        });
-      });  
-    }
+{
+  bufferToWav(audio, function(blob) {
+    Syrialize(blob, function(a) {
+      Recorder.forceDownload(a, 'syro.wav');
+    });
+  });  
+}
 ```
 
 Build
 ---
-You need to install [emscripten](https://github.com/kripken/emscripten).
+First install [emscripten](https://github.com/kripken/emscripten).
 
-Then, you should be able to run `make` and build the minified `*.js` files in `build` folder.
+Then, run `make` to build the minified `js` file. It should appear in `build` folder.
