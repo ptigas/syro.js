@@ -9,7 +9,7 @@ Read about the sdk here https://github.com/korginc/volcasample.
 Usage
 ---
 
-Include `build\syro.js` to your project. You can apply the function below on an [audio context](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) get a downloadable wav file to sing for your volca.
+Include `build\syro.js` to your project. You can apply the function below on an [audio context](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to download a syro song for your volca sample.
 
 ```javascript
 function serializeData(audio, file)
