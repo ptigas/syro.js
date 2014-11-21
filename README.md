@@ -1,7 +1,7 @@
 syro.js
 =======
 
-This is a javascript library for Korg Volca Sample, which uses SYRO SDK. You can play with it on http://ptigas.com/syrialize.
+This is a javascript library for Korg Volca Sample, which uses SYRO SDK. You can play with it on http://ptigas.com/syrializer/.
 
 
 More details about the sdk you can check here https://github.com/korginc/volcasample.
