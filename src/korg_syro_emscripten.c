@@ -656,7 +656,7 @@ static int main2(int argc, char **argv)
 	return 0;
 }
 
-static uint8_t* EMSCRIPTEN_KEEPALIVE syrializer(uint8_t *src, uint32_t *size_dest, uint32_t chunk_size)
+static uint8_t* EMSCRIPTEN_KEEPALIVE syrializer(uint8_t *src, uint32_t *size_dest, uint32_t chunk_size, int num)
 {
 	SyroData syro_data[MAX_SYRO_DATA];
 	SyroStatus status;
@@ -667,7 +667,7 @@ static uint8_t* EMSCRIPTEN_KEEPALIVE syrializer(uint8_t *src, uint32_t *size_des
 
 	uint8_t *buf_dest;
 	
-	initialize(DataType_Sample_Compress, 1, 16, syro_data);
+	initialize(DataType_Sample_Compress, num, 16, syro_data);
 
 	setup_file_sample2(src, syro_data, chunk_size);
 	
@@ -713,7 +713,7 @@ static uint8_t* EMSCRIPTEN_KEEPALIVE syrializer(uint8_t *src, uint32_t *size_des
 	return buf_dest;
 }
 
-uint8_t* convert(char* filename, uint32_t* size_dest)
+uint8_t* convert(char* filename, uint32_t* size_dest, int num)
 {
 	uint32_t size;
 	uint8_t *src;
@@ -725,7 +725,7 @@ uint8_t* convert(char* filename, uint32_t* size_dest)
 		return NULL;
 	}
 
-	buf_dest = syrializer(src, size_dest, size);
+	buf_dest = syrializer(src, size_dest, size, num);
 	
 	return buf_dest;
 }

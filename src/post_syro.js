@@ -24,9 +24,9 @@
         return output;
     }
 
-    var Syrialize = function(audio, callback) {
+    var Syrialize = function(audio, num, callback) {
         syro = Module.cwrap(
-            'syrializer', 'number', ['number', 'number', 'number']
+            'syrializer', 'number', ['number', 'number', 'number', 'number']
         );
 
         var reader = new FileReader();
@@ -43,7 +43,7 @@
             var size_dest_bytes = 4; // 32 unsigned is 4 bytes;
             var size_dest_ptr = Module._malloc(size_dest_bytes);
 
-            var syralizedData = syro(dataPtr, size_dest_ptr, nDataBytes);
+            var syralizedData = syro(dataPtr, size_dest_ptr, nDataBytes, num);
 
             var len = intFromBytes(HEAPU8.subarray(size_dest_ptr, size_dest_ptr + 4), false);
 
