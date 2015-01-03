@@ -5,4 +5,4 @@ SOURCES=src/korg_syro_emscripten.c\
 		src/post_syro.js
 
 all: $(SOURCES)
-	$(EMCC) -I$(INCLUDES) src/korg_syro_emscripten.c -s NO_EXIT_RUNTIME=1 -s EXPORTED_FUNCTIONS="['syrializer']" -O3 --post-js src/post_syro.js --closure 1 -o $(SYROJS)
+	$(EMCC) -I$(INCLUDES) src/korg_syro_emscripten.c -s NO_EXIT_RUNTIME=1 -s EXPORTED_FUNCTIONS="['syrializer']" -O1 --post-js src/post_syro.js --closure 1 -o $(SYROJS)
