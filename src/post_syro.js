@@ -2,7 +2,6 @@
     function intFromBytes(x, big_endian) {
         var val = 0;
         for (var i = 0; i < x.length; ++i) {
-
             if (big_endian) {
                 val += x[i];
             } else {
