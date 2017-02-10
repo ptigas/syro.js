@@ -59,5 +59,4 @@
     }
 
     window.Syrialize = Syrialize;
-
 })(window);
